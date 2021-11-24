@@ -4,10 +4,13 @@ import java.util.Scanner;
 public class GestioneBanca {
 
 	public static void main(String[] args) {
+		//Creo l'oggetto per l'input
 		Scanner input = new Scanner(System.in);
 
 		int numeroUtenti;
-
+		
+		//Inserimento numero utenti da inserire e conseguente creazioe
+		//del vettore "utenti"
 		System.out.println("Salve, quanti utenti vuoi inserire?");
 		numeroUtenti = input.nextInt();
 		Utente[] utenti = new Utente[numeroUtenti];

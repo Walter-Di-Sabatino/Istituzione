@@ -11,18 +11,21 @@ public class ContoCorrente {
 	public static double tasso = 0.10;
 	private static double tassoFamily = 0.12;
 	private static double tassoBusiness = 0.15;
-
+	
+	//Costruttore
 	ContoCorrente(double primoSaldo) {
 		saldo = primoSaldo;
 		idUltimoConto++;
 		idConto = idUltimoConto;
 	}
-
+	
+	//Metodo per versare una certa somma nel conto corrente
 	public void versa(double versamento) {
 		saldo += versamento ;
 		System.out.println(" Versati: " + versamento + "euro");
 	}
-
+	
+	//Metodo per prelevare dal conto corrente
 	public boolean preleva(double prelievo) {
 		if ( saldo < prelievo ) 
 			return false ;
@@ -32,7 +35,8 @@ public class ContoCorrente {
 			return true ;
 		}
 	}
-
+	
+	//Vari metodi get e set
 	public double getSaldo () {
 		return saldo ;
 	}
@@ -40,7 +44,8 @@ public class ContoCorrente {
 	public double getNumero() {
 		return idConto;
 	}
-
+	
+	//Metodo per il calcolo degli interessi
 	public void maturaInteressi(String cliente) {
 		if(cliente.equals("family") || cliente.equals("Family"))
 			saldo += saldo*tassoFamily;

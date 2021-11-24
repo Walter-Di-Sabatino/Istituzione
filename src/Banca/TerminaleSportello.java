@@ -5,7 +5,8 @@ public class TerminaleSportello {
 	Scanner input = new Scanner(System.in);
 
 	private int utenteDesignato;
-
+	
+	//Costruttore
 	public TerminaleSportello(Utente[] array) {
 
 		boolean tf = true;
@@ -19,7 +20,8 @@ public class TerminaleSportello {
 				System.out.println("Hai inserito dati errati, riprova");
 		} while(tf);
 	}
-
+	
+	//Metodo per effettuare il login
 	public boolean login(Utente[] array) {
 
 		String utente, tipoUtente, password;
@@ -42,7 +44,8 @@ public class TerminaleSportello {
 
 		return false;
 	}
-
+	
+	//Metodo che rispecchia l'impostazione del menù del terminale
 	public void menu(Utente utente) {
 
 		int valore;

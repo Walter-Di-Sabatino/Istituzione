@@ -3,14 +3,15 @@ import java.util.Scanner;
 
 public class Utente {
 	Scanner input = new Scanner(System.in);
-
+	
 	private int id;
 	private static int idUltimo = 1000;
 	private String utente;
 	private String password;
 	private String tipoUtente;
 	private ContoCorrente primoConto;
-
+	
+	//Costruttore
 	public Utente(String u, String type, String p, double primoSaldo) {
 		idUltimo++;
 		id = idUltimo;
@@ -20,7 +21,8 @@ public class Utente {
 		primoConto = new ContoCorrente(primoSaldo);
 
 	}
-
+	
+	//Metodo per il cambio password
 	public boolean cambiaPassword(String pwd, String newPwd) {
 		if(password.equals(pwd)) {
 			pwd = newPwd;
@@ -33,7 +35,8 @@ public class Utente {
 		return false;
 		}
 	}
-
+	
+	//Vari metodi get e set
 	public ContoCorrente getConto() {
 		return primoConto;
 	}
